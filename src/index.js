@@ -7,6 +7,7 @@ const Counter= ({contador}) => {
   console.log('Counter Render :V')
   return <h1>{contador}</h1>
 }
+
 const App =(props) => {
   const [contadorValue, updateContador]  = useState(13)
 
@@ -15,6 +16,7 @@ const App =(props) => {
   const contadorValue = contador[0]
   const updateContador = contador[1]
   */
+
   console.log('Render?')
 
   const handleOnClick = () => {
