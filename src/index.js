@@ -30,8 +30,8 @@ const App =() => {
     }
     setCounters(newCountersState);
     setClicks(prevClicks => {
-      return [...prevClicks, 'L']
-    })
+      return [...prevClicks, 'L'] 
+    });
   }
 
   const handleClickRight = () => {
@@ -73,6 +73,7 @@ const App =() => {
     </div>
   )
 }
+
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
