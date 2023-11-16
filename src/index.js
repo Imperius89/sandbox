@@ -8,27 +8,31 @@ const App =() => {
 
   const[counters, setCounters] = useState({
     left: 0,
-    right: 0
+    right: 0,
+    clicks: 0
   })
 
   const handleClickLeft = () => {
     setCounters({
       left: counters.left +1,
-      right: counters.right
+      right: counters.right,
+      clicks: counters.clicks + 1
     })
   }
 
   const handleClickRight = () => {
     setCounters({
       left: counters.left,
-      right: counters.right +1
+      right: counters.right +1,
+      clicks: counters.clicks + 1
     })
   }
 
   const reset =() =>{
     setCounters({
       left: 0,
-      right: 0
+      right: 0,
+      clicks: 0
     })
   }
 
@@ -45,6 +49,7 @@ const App =() => {
         Right
       </button>
       {counters.right}
+      <p>Clicks totales: {counters.clicks}</p>
     </div>
   )
 }
