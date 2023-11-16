@@ -13,13 +13,18 @@ const App =() => {
     mensaje: 'mensaje anclado al estado'
   });
 
+  const [clicks, setClicks] = useState([])
+
   const handleClickLeft = () => {
     const newCountersState ={
       ...counters,
       left: counters.left + 1,
       clicks: counters.clicks + 1
     }
-    setCounters(newCountersState)
+    setCounters(newCountersState);
+    setClicks(prevClicks => {
+      return [...prevClicks, 'L']
+    })
   }
 
   const handleClickRight = () => {
@@ -27,6 +32,9 @@ const App =() => {
       ...counters,
       right: counters.right + 1,
       clicks: counters.clicks + 1
+    });
+    setClicks(prevClicks => {
+      return [...prevClicks, 'L']
     })
   }
 
@@ -53,7 +61,7 @@ const App =() => {
       </button>
       {counters.right}
       <p>Clicks totales: {counters.clicks}</p>
-      <p>{counters.mensaje}</p>
+      {clicks}
     </div>
   )
 }
