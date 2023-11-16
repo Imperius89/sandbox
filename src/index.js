@@ -47,8 +47,7 @@ const App =() => {
     setCounters({
       ...counters,
       left: 0,
-      right: 0,
-      clicks: 0
+      right: 0
     })
   }
 
