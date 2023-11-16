@@ -7,6 +7,7 @@ const WarningNotUsed = () => {
 }
 
 const ListOfClicks = ({clicks}) => {
+  console.log({ clicks });
   return <p> {clicks.join(", ")} </p>
 }
 
