@@ -32,6 +32,7 @@ const App =() => {
 
   const reset =() =>{
     setCounters({
+      ...counters,
       left: 0,
       right: 0,
       clicks: 0
