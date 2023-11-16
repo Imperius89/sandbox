@@ -24,12 +24,22 @@ const App =() => {
       right: counters.right +1
     })
   }
-  
+
+  const reset =() =>{
+    setCounters({
+      left: 0,
+      right: 0
+    })
+  }
+
   return (
     <div>
       {counters.left}
       <button onClick={handleClickLeft}>
         Left
+      </button>
+      <button onClick={reset}>
+        Reset
       </button>
       <button onClick={handleClickRight}>
         Right
