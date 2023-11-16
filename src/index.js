@@ -24,7 +24,7 @@ const App =() => {
 
   const handleClickRight = () => {
     setCounters({
-      left: counters.left,
+      ...counters,
       right: counters.right +1,
       clicks: counters.clicks + 1
     })
