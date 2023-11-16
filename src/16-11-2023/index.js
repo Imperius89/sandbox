@@ -48,10 +48,8 @@ const App =() => {
     setCounters({
       ...counters,
       left: 0,
-      right: 0,
-      mensaje: 'mensaje anclado al estado'
+      right: 0
     })
-    setClicks([])
   }
 
   return (
