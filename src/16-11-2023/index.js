@@ -11,15 +11,17 @@ const ListOfClicks = ({clicks}) => {
   return <p> {clicks.join(", ")} </p>
 }
 
+const INITIAL_COUNTER_STATE = {
+    left: 0,
+    right: 0,
+    mensaje: 'mensaje anclado al estado'
+}
+
 const App =() => {
   //const [left, setLeft] = useState(10)
   //const [right, setRight] = useState(20)
 
-  const[counters, setCounters] = useState({
-    left: 0,
-    right: 0,
-    mensaje: 'mensaje anclado al estado'
-  });
+  const[counters, setCounters] = useState(INITIAL_COUNTER_STATE);
 
   const [clicks, setClicks] = useState([])
 
@@ -45,11 +47,8 @@ const App =() => {
   }
 
   const reset =() =>{
-    setCounters({
-      ...counters,
-      left: 0,
-      right: 0
-    })
+    setCounters(INITIAL_COUNTER_STATE);
+    setClicks([]);
   }
 
   return (
