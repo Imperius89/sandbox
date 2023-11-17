@@ -1,23 +1,30 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
+const Display = (props) => {
+  return (
+    <div>{props.counter}</div>
+  )
+}
+
 const App = () => {
 
   const [ counter, setCounter ] = useState(0)
 
+  const increaseByOne = () =>  setCounter(counter + 1)
 
-  setTimeout(
-    () => setCounter(counter + 1),
-    1000
-  )
+  const setToZero = () => setCounter(0)
 
   console.log('rendering... ', counter)
 
   return (
     <div>
-      <div>{counter}</div>
-      <button onClick={() => console.log('Clickiado')}>
+      <Display counter={counter}/>
+      <button onClick={increaseByOne}>
        Sumale Uno :V
+      </button>
+      <button onClick={setToZero}>
+        Zero
       </button>
     </div>
   )
